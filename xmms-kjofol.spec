@@ -14,8 +14,6 @@ BuildRequires:	xmms-devel
 BuildRequires:	libpng-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 In this package you can find the Visualization plugin that enable
