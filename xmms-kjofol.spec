@@ -8,7 +8,9 @@ Release:	1
 License:	GPL v2
 Group:		X11/Applications/Multimedia
 Source0:	http://www.csse.monash.edu.au/~timf/kint_xmms-%{version}.tar.gz
+# Source0-md5:	60cdb4e1bbc8d121c99da2f4d00813c2
 Source1:	kjofol-skins.tar
+# Source1-md5:	8a01be97c2bac9ffdffc5c24fc6a47a0
 URL:		http://www.dgs.monash.edu.au/~timf/xmms/
 BuildRequires:	xmms-devel
 BuildRequires:	libpng-devel
