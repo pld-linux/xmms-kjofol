@@ -5,8 +5,8 @@ Summary(uk):	XMMS - модуль для п╕дтримки ск╕н╕в в╕д kjofol
 Name:		xmms-kjofol
 Version:	0.95
 Release:	1
+License:	GPL v2
 Group:		X11/Applications/Multimedia
-License:	GPL
 Source0:	http://www.csse.monash.edu.au/~timf/kint_xmms-%{version}.tar.gz
 Source1:	kjofol-skins.tar
 URL:		http://www.dgs.monash.edu.au/~timf/xmms/
@@ -60,7 +60,8 @@ XMMS.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -DHAVE_LIBPNG -DXMMS_DIR=\\\"`xmms-config --data-dir`\\\" -DKJSKIN=\\\"`xmms-config --data-dir`/kjofol/default.zip\\\" `xmms-config --cflags`" \
+	CFLAGS="%{rpmcflags} -DHAVE_LIBPNG -DXMMS_DIR=\\\"`xmms-config --data-dir`\\\" \
+	-DKJSKIN=\\\"`xmms-config --data-dir`/kjofol/default.zip\\\" `xmms-config --cflags`" \
 	LDFLAGS="%{rpmldflags}" \
 	VFLAGS="-DXMMS_VIS=1" \
 	VLDFLAGS="-shared"
