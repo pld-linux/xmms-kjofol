@@ -4,10 +4,11 @@ Summary(ru):	XMMS - модуль для поддержки скинов от kjofol
 Summary(uk):	XMMS - модуль для п╕дтримки ск╕н╕в в╕д kjofol
 Name:		xmms-kjofol
 Version:	0.95
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Multimedia
 Source0:	http://www.csse.monash.edu.au/~timf/kint_xmms-%{version}.tar.gz
+# Source0-md5:	60cdb4e1bbc8d121c99da2f4d00813c2
 Source1:	kjofol-skins.tar
 URL:		http://www.dgs.monash.edu.au/~timf/xmms/
 BuildRequires:	xmms-devel
