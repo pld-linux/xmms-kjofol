@@ -60,7 +60,7 @@ XMMS.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -DHAVE_LIBPNG -DXMMS_DIR=\\\"`xmms-config --visualization-plugin-dir`\\\" -DKJSKIN=\\\"`xmms-config --data-dir`/kjofol/default.zip\\\" `xmms-config --cflags`" \
+	CFLAGS="%{rpmcflags} -DHAVE_LIBPNG -DXMMS_DIR=\\\"`xmms-config --data-dir`\\\" -DKJSKIN=\\\"`xmms-config --data-dir`/kjofol/default.zip\\\" `xmms-config --cflags`" \
 	LDFLAGS="%{rpmldflags}" \
 	VFLAGS="-DXMMS_VIS=1" \
 	VLDFLAGS="-shared"
