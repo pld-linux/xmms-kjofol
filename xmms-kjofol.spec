@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc readme.txt 
+%doc readme.txt
 %{xmms_visualization_plugindir}/libkjofol*
 %dir %{xmms_datadir}/kjofol
 %{xmms_datadir}/kjofol/default.zip
