@@ -72,7 +72,7 @@ mv kj libkjofol.so
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{xmms_visualization_plugindir} \
-	$RPM_BUILD_ROOT%{xmms_datadir}/kjofol}
+	$RPM_BUILD_ROOT%{xmms_datadir}/kjofol
 
 install libkjofol.so $RPM_BUILD_ROOT%{xmms_visualization_plugindir}
 install default.zip penguin.zip kjofol/* $RPM_BUILD_ROOT%{xmms_datadir}/kjofol
