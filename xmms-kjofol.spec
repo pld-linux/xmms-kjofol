@@ -4,7 +4,7 @@ Summary(ru):	XMMS - модуль для поддержки скинов от kjofol
 Summary(uk):	XMMS - модуль для п╕дтримки ск╕н╕в в╕д kjofol
 Name:		xmms-kjofol
 Version:	0.95
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Multimedia
 Source0:	http://www.csse.monash.edu.au/~timf/kint_xmms-%{version}.tar.gz
@@ -12,10 +12,11 @@ Source0:	http://www.csse.monash.edu.au/~timf/kint_xmms-%{version}.tar.gz
 Source1:	kjofol-skins.tar
 # Source1-md5:	8a01be97c2bac9ffdffc5c24fc6a47a0
 URL:		http://www.dgs.monash.edu.au/~timf/xmms/
-BuildRequires:	xmms-devel
 BuildRequires:	libpng-devel
+BuildRequires:	rpmbuild(macros) >= 1.125
+BuildRequires:	xmms-devel
+Requires:	xmms
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 In this package you can find the Visualization plugin that enable
@@ -60,8 +61,8 @@ XMMS.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -DHAVE_LIBPNG -DXMMS_DIR=\\\"`xmms-config --data-dir`\\\" \
-	-DKJSKIN=\\\"`xmms-config --data-dir`/kjofol/default.zip\\\" `xmms-config --cflags`" \
+	CFLAGS="%{rpmcflags} -DHAVE_LIBPNG -DXMMS_DIR=\\\"%{xmms_datadir}\\\" \
+	-DKJSKIN=\\\"%{xmms_datadir}/kjofol/default.zip\\\" `xmms-config --cflags`" \
 	LDFLAGS="%{rpmldflags}" \
 	VFLAGS="-DXMMS_VIS=1" \
 	VLDFLAGS="-shared"
@@ -70,10 +71,11 @@ mv kj libkjofol.so
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_libdir}/xmms/Visualization,%{_datadir}/xmms/kjofol}
+install -d $RPM_BUILD_ROOT%{xmms_visualization_plugindir} \
+	$RPM_BUILD_ROOT%{xmms_datadir}/kjofol}
 
-install libkjofol.so $RPM_BUILD_ROOT%{_libdir}/xmms/Visualization
-install default.zip penguin.zip kjofol/* $RPM_BUILD_ROOT%{_datadir}/xmms/kjofol
+install libkjofol.so $RPM_BUILD_ROOT%{xmms_visualization_plugindir}
+install default.zip penguin.zip kjofol/* $RPM_BUILD_ROOT%{xmms_datadir}/kjofol
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -81,26 +83,26 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc readme.txt 
-%{_libdir}/xmms/Visualization/libkjofol*
-%dir %{_datadir}/xmms/kjofol
-%{_datadir}/xmms/kjofol/default.zip
+%{xmms_visualization_plugindir}/libkjofol*
+%dir %{xmms_datadir}/kjofol
+%{xmms_datadir}/kjofol/default.zip
 
 %files skins
 %defattr(644,root,root,755)
-%{_datadir}/xmms/kjofol/atomic.zip
-%{_datadir}/xmms/kjofol/bio_hazard.zip
-%{_datadir}/xmms/kjofol/bluestrain.zip
-%{_datadir}/xmms/kjofol/happy_2_0.zip
-%{_datadir}/xmms/kjofol/illusion.zip
-%{_datadir}/xmms/kjofol/knine.zip
-%{_datadir}/xmms/kjofol/maegashira_1_01.zip
-%{_datadir}/xmms/kjofol/nokiamp_1_0.zip
-%{_datadir}/xmms/kjofol/Okovoid.zip
-%{_datadir}/xmms/kjofol/penguin.zip
-%{_datadir}/xmms/kjofol/phong.zip
-%{_datadir}/xmms/kjofol/scathe.zip
-%{_datadir}/xmms/kjofol/shuttle_1_0.zip
-%{_datadir}/xmms/kjofol/spectre.zip
-%{_datadir}/xmms/kjofol/walkjofol.zip
-%{_datadir}/xmms/kjofol/xl_size.zip
-%{_datadir}/xmms/kjofol/x_ray_1_0.zip
+%{xmms_datadir}/kjofol/atomic.zip
+%{xmms_datadir}/kjofol/bio_hazard.zip
+%{xmms_datadir}/kjofol/bluestrain.zip
+%{xmms_datadir}/kjofol/happy_2_0.zip
+%{xmms_datadir}/kjofol/illusion.zip
+%{xmms_datadir}/kjofol/knine.zip
+%{xmms_datadir}/kjofol/maegashira_1_01.zip
+%{xmms_datadir}/kjofol/nokiamp_1_0.zip
+%{xmms_datadir}/kjofol/Okovoid.zip
+%{xmms_datadir}/kjofol/penguin.zip
+%{xmms_datadir}/kjofol/phong.zip
+%{xmms_datadir}/kjofol/scathe.zip
+%{xmms_datadir}/kjofol/shuttle_1_0.zip
+%{xmms_datadir}/kjofol/spectre.zip
+%{xmms_datadir}/kjofol/walkjofol.zip
+%{xmms_datadir}/kjofol/xl_size.zip
+%{xmms_datadir}/kjofol/x_ray_1_0.zip
