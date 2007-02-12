@@ -1,7 +1,7 @@
 Summary:	XMMS - Vis plugin to get kjofol skins
-Summary(pl):	Plugin zapewniaj╠cy obsЁugЙ skСrek programu kjofol
-Summary(ru):	XMMS - модуль для поддержки скинов от kjofol
-Summary(uk):	XMMS - модуль для п╕дтримки ск╕н╕в в╕д kjofol
+Summary(pl.UTF-8):   Plugin zapewniajд┘cy obsе┌ugд≥ skцЁrek programu kjofol
+Summary(ru.UTF-8):   XMMS - п╪п╬п╢я┐п╩я▄ п╢п╩я▐ п©п╬п╢п╢п╣я─п╤п╨п╦ я│п╨п╦п╫п╬п╡ п╬я┌ kjofol
+Summary(uk.UTF-8):   XMMS - п╪п╬п╢я┐п╩я▄ п╢п╩я▐ п©я√п╢я┌я─п╦п╪п╨п╦ я│п╨я√п╫я√п╡ п╡я√п╢ kjofol
 Name:		xmms-kjofol
 Version:	0.95
 Release:	2
@@ -22,37 +22,37 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 In this package you can find the Visualization plugin that enable
 K-Jofol skins support.
 
-%description -l pl
-DziЙki wtyczce z tego pakietu mo©na u©ywaФ w XMMS-ie skСrek programu
+%description -l pl.UTF-8
+Dziд≥ki wtyczce z tego pakietu moе╪na uе╪ywaд┤ w XMMS-ie skцЁrek programu
 K-Jofol.
 
-%description -l uk
-Цей пакет м╕стить в╕зуальний модуль, що реал╕зу╓ п╕дтримку ск╕н-файл╕в
-в╕д K-Jofol.
+%description -l uk.UTF-8
+п╕п╣п╧ п©п╟п╨п╣я┌ п╪я√я│я┌п╦я┌я▄ п╡я√п╥я┐п╟п╩я▄п╫п╦п╧ п╪п╬п╢я┐п╩я▄, я┴п╬ я─п╣п╟п╩я√п╥я┐я■ п©я√п╢я┌я─п╦п╪п╨я┐ я│п╨я√п╫-я└п╟п╧п╩я√п╡
+п╡я√п╢ K-Jofol.
 
-%description -l ru
-Этот пакет содержит визуальный модуль, реализующий поддержку
-скин-файлов от K-Jofol.
+%description -l ru.UTF-8
+п╜я┌п╬я┌ п©п╟п╨п╣я┌ я│п╬п╢п╣я─п╤п╦я┌ п╡п╦п╥я┐п╟п╩я▄п╫я▀п╧ п╪п╬п╢я┐п╩я▄, я─п╣п╟п╩п╦п╥я┐я▌я┴п╦п╧ п©п╬п╢п╢п╣я─п╤п╨я┐
+я│п╨п╦п╫-я└п╟п╧п╩п╬п╡ п╬я┌ K-Jofol.
 
 %package skins
 Summary:	Some kjofol skins for XMMS
-Summary(pl):	Kilka skСrek
-Summary(ru):	Некоторые скины от kjofol для XMMS
-Summary(uk):	Деяк╕ "ск╕ни" в╕д kjofol для XMMS
+Summary(pl.UTF-8):   Kilka skцЁrek
+Summary(ru.UTF-8):   п²п╣п╨п╬я┌п╬я─я▀п╣ я│п╨п╦п╫я▀ п╬я┌ kjofol п╢п╩я▐ XMMS
+Summary(uk.UTF-8):   п■п╣я▐п╨я√ "я│п╨я√п╫п╦" п╡я√п╢ kjofol п╢п╩я▐ XMMS
 Group:		X11/Applications/Multimedia
 Requires:	%{name}
 
 %description skins
 In this package you can find several cute K-Jofol skins for XMMS.
 
-%description skins -l pl
-Kilka Ёadnych skСrek z K-Jofol.
+%description skins -l pl.UTF-8
+Kilka е┌adnych skцЁrek z K-Jofol.
 
-%description skins -l uk
-Цей пакет м╕стить к╕лька гарних ск╕н-файл╕в в╕д K-Jofol для XMMS.
+%description skins -l uk.UTF-8
+п╕п╣п╧ п©п╟п╨п╣я┌ п╪я√я│я┌п╦я┌я▄ п╨я√п╩я▄п╨п╟ пЁп╟я─п╫п╦я┘ я│п╨я√п╫-я└п╟п╧п╩я√п╡ п╡я√п╢ K-Jofol п╢п╩я▐ XMMS.
 
-%description skins -l ru
-Этот пакет содержит несколько красивых скин-файлов от K-Jofol для
+%description skins -l ru.UTF-8
+п╜я┌п╬я┌ п©п╟п╨п╣я┌ я│п╬п╢п╣я─п╤п╦я┌ п╫п╣я│п╨п╬п╩я▄п╨п╬ п╨я─п╟я│п╦п╡я▀я┘ я│п╨п╦п╫-я└п╟п╧п╩п╬п╡ п╬я┌ K-Jofol п╢п╩я▐
 XMMS.
 
 %prep
