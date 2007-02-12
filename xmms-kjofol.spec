@@ -1,7 +1,7 @@
 Summary:	XMMS - Vis plugin to get kjofol skins
-Summary(pl.UTF-8):   Plugin zapewniający obsługę skórek programu kjofol
-Summary(ru.UTF-8):   XMMS - модуль для поддержки скинов от kjofol
-Summary(uk.UTF-8):   XMMS - модуль для підтримки скінів від kjofol
+Summary(pl.UTF-8):	Plugin zapewniający obsługę skórek programu kjofol
+Summary(ru.UTF-8):	XMMS - модуль для поддержки скинов от kjofol
+Summary(uk.UTF-8):	XMMS - модуль для підтримки скінів від kjofol
 Name:		xmms-kjofol
 Version:	0.95
 Release:	2
@@ -36,9 +36,9 @@ K-Jofol.
 
 %package skins
 Summary:	Some kjofol skins for XMMS
-Summary(pl.UTF-8):   Kilka skórek
-Summary(ru.UTF-8):   Некоторые скины от kjofol для XMMS
-Summary(uk.UTF-8):   Деякі "скіни" від kjofol для XMMS
+Summary(pl.UTF-8):	Kilka skórek
+Summary(ru.UTF-8):	Некоторые скины от kjofol для XMMS
+Summary(uk.UTF-8):	Деякі "скіни" від kjofol для XMMS
 Group:		X11/Applications/Multimedia
 Requires:	%{name}
 
